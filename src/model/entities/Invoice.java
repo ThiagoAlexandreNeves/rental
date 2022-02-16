@@ -2,33 +2,33 @@ package model.entities;
 
 public class Invoice {
 	
-	private double basicPayment;
-	private double tax;
+	private Double basicPayment;
+	private Double tax;
 	
 	private Invoice invoice;
 	
 	public Invoice() {
 	}
 
-	public Invoice(double basicPayment, double tax, Invoice invoice) {
+	public Invoice(Double basicPayment, Double tax, Invoice invoice) {
 		this.basicPayment = basicPayment;
 		this.tax = tax;
 		this.invoice = invoice;
 	}
 
-	public double getBasicPayment() {
+	public Double getBasicPayment() {
 		return basicPayment;
 	}
 
-	public void setBasicPayment(double basicPayment) {
+	public void setBasicPayment(Double basicPayment) {
 		this.basicPayment = basicPayment;
 	}
 
-	public double getTax() {
+	public Double getTax() {
 		return tax;
 	}
 
-	public void setTax(double tax) {
+	public void setTax(Double tax) {
 		this.tax = tax;
 	}
 
@@ -38,5 +38,9 @@ public class Invoice {
 
 	public void setInvoice(Invoice invoice) {
 		this.invoice = invoice;
+	}
+	
+	public Double getTotalPayment() {
+		return getBasicPayment() + getTax();
 	}
 }
