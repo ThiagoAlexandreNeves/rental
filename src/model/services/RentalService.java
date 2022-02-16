@@ -21,9 +21,7 @@ public class RentalService {
 	public void processInvoice(CarRental carRental) {
 		long t1 = carRental.getStart().getTime();
 		long t2 = carRental.getFinish().getTime();
-		long diff = t2 - t1;
 		double hours = (double) (t2 - t1) / 1000 / 60 / 60;
-		long days = TimeUnit.HOURS.convert(diff, TimeUnit.MILLISECONDS);
 		
 		double basicPayment;
 		if(hours <= 12.0) {
