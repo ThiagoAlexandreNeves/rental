@@ -1,7 +1,5 @@
 package model.services;
 
-import java.util.concurrent.TimeUnit;
-
 import model.entities.CarRental;
 import model.entities.Invoice;
 
@@ -10,9 +8,9 @@ public class RentalService {
 	private double pricePerDay;
 	private double pricePerHour;
 	
-	private BrazilTaxService taxService;
+	private TaxService taxService;
 
-	public RentalService(double pricePerDay, double pricePerHour, BrazilTaxService texService) {
+	public RentalService(double pricePerDay, double pricePerHour, TaxService texService) {
 		this.pricePerDay = pricePerDay;
 		this.pricePerHour = pricePerHour;
 		this.taxService = texService;
